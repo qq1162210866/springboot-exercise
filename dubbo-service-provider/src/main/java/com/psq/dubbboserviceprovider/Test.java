@@ -1,9 +1,11 @@
+package com.psq.dubbboserviceprovider;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 
 /**
- * Test.java
+ * com.psq.dubbboserviceprovider.Test.java
  * Description:
  *
  * @author Peng Shiquan

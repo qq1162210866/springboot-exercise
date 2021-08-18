@@ -1,5 +1,7 @@
+package com.psq.dubboserviceapi.service;
+
 /**
- * SayHelloService.java
+ * com.psq.dubboserviceapi.service.SayHelloService.java
  * Description: 示例接口
  *
  * @author Peng Shiquan

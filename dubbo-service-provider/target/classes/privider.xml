@@ -14,8 +14,8 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="SayHelloService" ref="sayHelloService"/>
+    <dubbo:service interface="com.psq.dubboserviceapi.service.SayHelloService" ref="sayHelloService"/>
 
     <!-- 和本地bean一样实现服务 -->
-    <bean id="sayHelloService" class="SayHelloServiceImpl"/>
+    <bean id="sayHelloService" class="com.psq.dubbboserviceprovider.server.SayHelloServiceImpl"/>
 </beans>

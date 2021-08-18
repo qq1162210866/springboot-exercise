@@ -1,3 +1,6 @@
+package com.psq.dubboserviceconsumer;
+
+import com.psq.dubboserviceapi.service.SayHelloService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -7,7 +10,7 @@ import java.io.IOException;
  * Description:
  *
  * @author Peng Shiquan
- * @date 2021/8/16
+ * @date 2021/8/18
  */
 public class Test2 {
     public static void main(String[] args) throws IOException {
@@ -19,6 +22,5 @@ public class Test2 {
         String hello = demoService.sayHello();
         System.err.println(hello);
         System.in.read();
-
     }
 }
