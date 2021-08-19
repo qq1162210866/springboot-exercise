@@ -1,9 +1,9 @@
 package com.psq.dubbboserviceprovider;
 
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * DubboServiceProviderApplication.java
@@ -13,6 +13,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @date 2021/8/18
  */
 @SpringBootApplication
+@EnableDubbo
 public class DubboServiceProviderApplication {
 
     public static void main(String[] args) {

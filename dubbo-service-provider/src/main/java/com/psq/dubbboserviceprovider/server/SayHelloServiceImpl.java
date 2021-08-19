@@ -1,7 +1,7 @@
 package com.psq.dubbboserviceprovider.server;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.psq.dubboserviceapi.service.SayHelloService;
-import org.apache.dubbo.config.annotation.Service;
 
 /**
  * com.psq.dubbboserviceprovider.server.SayHelloServiceImpl.java

@@ -1,7 +1,6 @@
 spring:
   application:
     name: dubbo-service-provider
-
 dubbo:
   application:
     name: dubbo-service-provider
