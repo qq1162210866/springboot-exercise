@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SayHelloController {
 
-    @Reference
+    //默认检查生产者是否存在
+    @Reference(check = false, timeout = 3000)
     private SayHelloService sayHelloService;
 
     @GetMapping("/sayHello")
