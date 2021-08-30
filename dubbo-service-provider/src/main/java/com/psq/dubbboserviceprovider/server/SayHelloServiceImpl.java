@@ -5,7 +5,7 @@ import org.apache.dubbo.config.annotation.Service;
 
 /**
  * com.psq.dubbboserviceprovider.server.SayHelloServiceImpl.java
- * Description:
+ * Description: SayHelloServiceImpl
  *
  * @author Peng Shiquan
  * @date 2021/8/15
