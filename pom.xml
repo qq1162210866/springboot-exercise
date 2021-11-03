@@ -20,6 +20,7 @@
         <module>dubbo-service-provider</module>
         <module>dubbo-service-consumer</module>
         <module>dubbo-service-api</module>
+        <module>mockito-train</module>
     </modules>
 
     <dependencies>
