@@ -21,6 +21,7 @@
         <module>dubbo-service-consumer</module>
         <module>dubbo-service-api</module>
         <module>mockito-train</module>
+        <module>excel-demo</module>
     </modules>
 
     <dependencies>
