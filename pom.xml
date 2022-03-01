@@ -22,6 +22,7 @@
         <module>dubbo-service-api</module>
         <module>mockito-train</module>
         <module>excel-demo</module>
+        <module>mybatis-exercise</module>
     </modules>
 
     <dependencies>

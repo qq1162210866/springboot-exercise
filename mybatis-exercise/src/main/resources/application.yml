@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useAffectedRows=true
+    username: root
+    password: 12345678
+
+
+mybatis:
+  typeAliasesPackage: com.psq.mybatisexercise.po
+  mapperLocations: classpath:mapper/*.xml
+

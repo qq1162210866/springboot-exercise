@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psq.mybatisexercise.dao.DataMethodSqlConfigDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.psq.mybatisexercise.po.DataMethodSqlConfig">
+        <id column="id" property="id"/>
+        <result column="method_name" property="methodName"/>
+        <result column="method_desc" property="methodDesc"/>
+        <result column="sql_template" property="sqlTemplate"/>
+        <result column="data_source_name" property="dataSourceName"/>
+        <result column="create_by" property="createBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="modified_by" property="modifiedBy"/>
+        <result column="modified_time" property="modifiedTime"/>
+        <result column="input_parameter" property="inputParameter"/>
+        <result column="output_parameter" property="outputParameter"/>
+    </resultMap>
+
+    <select id="selectSqlByMethodName" parameterType="String" resultType="String">
+        select sql_template
+        from data_method_sql_config
+        where method_name = #{methodName}
+    </select>
+</mapper>
