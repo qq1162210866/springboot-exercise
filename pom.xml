@@ -23,6 +23,7 @@
         <module>mockito-train</module>
         <module>excel-demo</module>
         <module>mybatis-exercise</module>
+        <module>nacos-exericse</module>
     </modules>
 
     <dependencies>
