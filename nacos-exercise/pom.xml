@@ -9,7 +9,7 @@
     </parent>
     <artifactId>nacos-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>nacos-exericse</name>
+    <name>nacos-exercise</name>
     <description>Nacos Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
