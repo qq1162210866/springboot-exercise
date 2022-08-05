@@ -15,11 +15,13 @@ public class ExerciseFactoryBean implements FactoryBean {
 
     @Override
     public Object getObject() throws Exception {
-        return null;
+        UserService userService = new UserService();
+        userService.setText("this is ExerciseFactoryBean");
+        return userService;
     }
 
     @Override
     public Class<?> getObjectType() {
-        return null;
+        return UserService.class;
     }
 }

@@ -1,9 +1,12 @@
 package com.example.springexercise;
 
+import com.example.springexercise.bean.A;
+import com.example.springexercise.bean.B;
 import com.example.springexercise.service.OrderService;
 import com.example.springexercise.service.StringToUserServiceConverter;
 import com.example.springexercise.service.StringToUserServicePropertyEditor;
 import com.example.springexercise.service.UserService;
+import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 import org.springframework.beans.factory.config.CustomEditorConfigurer;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
@@ -15,20 +18,22 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ConversionServiceFactoryBean;
+import org.springframework.core.OrderComparator;
 import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.core.io.Resource;
+import org.springframework.core.type.ClassMetadata;
+import org.springframework.core.type.classreading.MetadataReader;
+import org.springframework.core.type.classreading.SimpleMetadataReaderFactory;
 
 import java.beans.PropertyEditor;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootApplication
 public class SpringExerciseApplication {
 
     public static void main(String[] args) {
-        test5();
+        test9();
     }
 
 
@@ -117,5 +122,39 @@ public class SpringExerciseApplication {
         UserService value = conversionService.convert(1, UserService.class);
         System.out.println(value);
     }
+
+    public static void test7() {
+        OrderComparator orderComparator = new OrderComparator();
+        System.err.println(orderComparator.compare(new A(), new B()));
+
+        List list = new ArrayList();
+        list.add(new A());
+        list.add(new B());
+        list.sort(orderComparator);
+        System.err.println(list);
+    }
+
+    public static void test8() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringExerciseApplication.class);
+        UserService userService = (UserService) context.getBean("exerciseFactoryBean");
+        userService.test2();
+    }
+
+    public static void test9() {
+        SimpleMetadataReaderFactory simpleMetadataReaderFactory = new SimpleMetadataReaderFactory();
+        MetadataReader metadataReader;
+        try {
+            metadataReader = simpleMetadataReaderFactory.getMetadataReader("com.example.springexercise.service.ExerciseFactoryBean");
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ClassMetadata classMetadata = metadataReader.getClassMetadata();
+        System.err.println(classMetadata.getClassName());
+        for (String s : metadataReader.getAnnotationMetadata().getAnnotationTypes()) {
+            System.err.println(s);
+        }
+    }
+
 
 }
