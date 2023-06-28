@@ -25,6 +25,7 @@
         <module>mybatis-exercise</module>
         <module>nacos-exercise</module>
         <module>spring-exercise</module>
+        <module>security-exercise</module>
     </modules>
 
     <dependencies>
