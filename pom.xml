@@ -26,6 +26,7 @@
         <module>nacos-exercise</module>
         <module>spring-exercise</module>
         <module>security-exercise</module>
+        <module>shiro-exercise</module>
     </modules>
 
     <dependencies>
