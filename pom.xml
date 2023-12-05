@@ -27,6 +27,7 @@
         <module>spring-exercise</module>
         <module>security-exercise</module>
         <module>shiro-exercise</module>
+        <module>spring-web-exercise</module>
     </modules>
 
     <dependencies>
